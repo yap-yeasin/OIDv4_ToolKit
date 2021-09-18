@@ -1,14 +1,13 @@
-<h1> Forked repository and change Convert annotation.py </h1>
-<h3> In Multiclasses if any class have more than one word then this error will create. 
-    Example : "Vehicle registration plate" </h3>
-<h3> Issue is  </h3>
+<h1 align="center" > Forked repository and change Convert annotation.py </h1>
+<h3 align="center" > In Multiclasses if any class have more than one word then this error will create. Example : "Vehicle registration plate" </h3>
+<h3 align="center" > Issue is  </h3>
 
 ```
 File "convert_annotations.py", line 63, in <module>
     coords = np.asarray([float(labels[1]), float(labels[2]), float(labels[3]), float(labels[4])])
 ValueError: could not convert string to float: 'registration'
 ```
-<h3> main code </h3>
+<h3 align="center" > main code </h3>
 
 ```
 61      line = line.replace(class_type, str(classes.get(class_type)))
@@ -16,7 +15,7 @@ ValueError: could not convert string to float: 'registration'
 63  coords = np.asarray([float(labels[1]), float(labels[2]), float(labels[3]), float(labels[4])])
 
 ```
-<h3> Updated Code </h3>
+<h3 align="center" > Updated Code </h3>
 
 ```
 61      line = line.replace(class_type, str(classes.get(class_type))+' ')
